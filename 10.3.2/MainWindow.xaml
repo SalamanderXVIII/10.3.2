@@ -1,0 +1,44 @@
+﻿<Window x:Class="lab_10_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_10_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ToolBar Grid.Row="0" Grid.ColumnSpan="3">
+            <Button Content="Сгенерировать" Click="Button_Click"/>
+            <Separator/>
+            <Button Content="Выполнить" Click="Button_Click_1"/>
+        </ToolBar>
+        <TextBlock x:Name="Table1" Grid.Column="0" Grid.Row="2"
+                   Margin="10"/>
+        <TextBlock x:Name="Table2" Grid.Column="1" Grid.Row="2"
+                   Margin="10"/>
+        <TextBlock x:Name="Table3" Grid.Column="2" Grid.Row="2"
+                   Margin="10"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1"
+                    Grid.ColumnSpan="3">
+            <Label Content="K="/>
+            <TextBox x:Name="K" Width="100"/>
+            <Label Content="L="/>
+            <TextBox x:Name="L" Width="100"/>
+            <Label Content="N="/>
+            <TextBox x:Name="N" Width="100"/>
+            <Label Content="M="/>
+            <TextBox x:Name="M" Width="100"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
